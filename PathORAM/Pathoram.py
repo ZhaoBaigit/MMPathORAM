@@ -142,7 +142,7 @@ def main():
         end_time = time.time()
         elapsed_time = end_time - start_time
         print(f"Processing {image_count} images took {elapsed_time:.2f} seconds.")
-        time_records.append({'ImageCount-1': image_count, 'Time': elapsed_time})
+        time_records.append({'ImageCount': image_count, 'Time': elapsed_time})
     df = pd.DataFrame(time_records)
     df.to_csv("encryption_times.csv", index=False)
 if __name__ == "__main__":
